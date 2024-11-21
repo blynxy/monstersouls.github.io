@@ -12,8 +12,7 @@
       <li class=""><a href="#steam">Buy Game!</a></li>
     </ul>
   </div> -->
-  <div class="header-hero content-center">
-    <img src="../images/monster_souls_banner.jpg" alt="Monster Souls Banner" class="header-image">
+  <div class="header-image">
   </div>
   <!-- 
   <div class="parallax-header">
@@ -207,8 +206,24 @@
   font-weight: 600;
   text-shadow: 0px 0px 10px #ffffff;
 }
-.header-logo {
+.header-image {
+  height: 400px;
+  width: 100%;
+  background: no-repeat center url("../images/monster_souls_banner2.jpg") #a8480c;
+  background-size:auto 100%;
+  z-index: 10;
+}
+@media(max-width: 360px){
+  .header-image {
+    height: 150px;
+    /* background:  fit url("../images/monster_souls_banner.jpg") #a8480c; */
 
+  }
+}
+@media(min-width: 361px ) and ( max-width: 1000px){
+  .header-image {
+    height: 200px;
+  }
 }
 .parallax-header {
   height: 80vh;
