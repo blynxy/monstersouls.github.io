@@ -1,27 +1,35 @@
 <script>
   import Counter from "./lib/Counter.svelte";
+
+    let year = new Date().getFullYear();
 </script>
 
 <main>
-  <div class="navbar text-center">
+
+  <!-- <div class="navbar text-center">
     <ul>
       <li class=""><a href="#InputHeroGames">InputHero Games</a></li>
       <li class=""><a href="#steam">Buy Game!</a></li>
     </ul>
+  </div> -->
+  <div class="header-hero content-center">
+    <img src="../images/monster_souls_banner.jpg" alt="Monster Souls Banner" class="header-image">
   </div>
+  <!-- 
   <div class="parallax-header">
     <div class="parallax__group">
-      <div class="parallax__layer back-0" data-speed="95"></div>
-      <div class="parallax__layer back-1" data-speed="89"></div>
+        <div class="parallax__layer back-0" data-speed="95"></div> 
+        <div class="parallax__layer back-1" data-speed="89"></div>
       <div class="parallax__layer back-2" data-speed="69"></div>
       <div class="parallax__layer back-3" data-speed="49"></div>
       <div class="parallax__layer back-4" data-speed="40"></div>
       <div class="parallax__layer back-5" data-speed="35"></div>
       <div class="parallax__layer back-6" data-speed="30"></div>
-      <div class="parallax__layer back-7" data-speed="20"></div>
+      <div class="parallax__layer back-7" data-speed="20"></div> 
     </div>
   </div>
-  <div class="page-top-image"></div>
+  -->
+  <!-- <div class="page-top-image"></div> -->
     <!-- Steam Store Page here -->
   <div class="w-full steam-embed">
     <div class="max-w-2xl mx-auto steam-embed">
@@ -39,7 +47,7 @@
       </div>
     </div>
   </div>
-  <div class="page-top-image-flip"></div>
+  <div class="page-content-top-image w-full"></div>
 
   <div class="page-content pt-8">
     
@@ -47,20 +55,22 @@
       <!-- Description Here -->
       <div class="max-w-2xl mx-auto">
         <div
-          class="grid grid-cols-1 bg-slate-900/75 drop-shadow backdrop-blur rounded mb-6"
+          class="grid grid-cols-1 bg-slate-900/75 drop-shadow backdrop-blur rounded-lg mb-6"
         >
           <div class=" space-y-7s text-white p-3">
             <a id="description">
               <h2 class="text-2xl text-center pt-6">Game Summary</h2>
             </a>
               <p class="pt-6 pb-2">
-                <img
-                  class="char-left
-                   object-cover h-64 float-left pr-3 mt-3 img-left"
-                  src="/images/characters/hero2.png"
-                  alt="Hero"
-                />
-                <span class="img-left-container"></span>
+                
+                
+                <span class="char-left-box h-64">
+                  <img
+                    class="char-left object-cover"
+                    src="/images/characters/hero_portrait.png"
+                    alt="Hero"
+                  />
+                </span>
                 Guide a virgin adventurer through his first fights and help him learn both about himself and how to use the powers he didn't realize he had. Experience an involved story that slowly reveals more about the world about you as you journey through multiple visually appealing and varied locations, from forests to caves to castles.
               </p>
             <p class="pb-2">
@@ -75,28 +85,32 @@
             <div
               class="bg-slate-200/10 rounded p-3 min-h-60 drop-shadow mt-3 mb-3"
             >
-              <img
-                class="char-right object-cover h-48 float-right pr-3"
-                src="/images/characters/ash.png"
-                alt="Ash"
-                style="transform: scaleX(-1);"
-              />
-              <h1 class="text-lg pb-6">Ash</h1>
-              <p class="text-amber-400">
+            <h1 class="text-lg pb-6">Ash</h1>
+            <p class="text-amber-400">
+                <img
+                  class="char-right object-cover p-3"
+                  src="/images/characters/ash_portrait.png"
+                  alt="Ash"
+                  style="transform: scaleX(-1);"
+                />
                 A quiet warlock's apprentice, he wields two daggers and dark magic. At first reticent about accepting help with his mission, he quickly comes to show interest in the Hero due to his unique powers. Can you win his heart, or will he be brooding alone?
               </p>
             </div>
   
             <div
               class="bg-slate-200/10 rounded p-3 min-h-60 drop-shadow mt-3 mb-3"
-            ><a href="#lyric">
-              <img
-                class="char-left object-cover h-48 float-left pr-3"
-                src="/images/characters/lyric.png"
-                alt="Lyric"
-              /></a>
+            >
+            <a href="#lyric">
+              
+              </a>
               <h1 class="text-lg pb-6">Lyric</h1>
               <p class="text-amber-400">
+                <img
+                class="char-right object-cover p-3"
+                src="/images/characters/lyric_portrait.png"
+                alt="Ash"
+                style="transform: scaleX(-1);"
+              />
                 An archer with magical bardic powers, allowing him to heal and empower his allies. When Hero comes to his rescue, he vows to aid him in his journey... but the truth of his origins is shrouded in mystery. Will you help him to open up, or will his secrets spell doom for his (love) life?
               </p>
             </div>
@@ -120,13 +134,14 @@
           </div>
         </div>
       </div>
+      <div class="page-content-bottom-image w-full"></div>
 
-      <div class="video-hero drop-shadow">
+      <div class="video-hero drop-shadow p-6">
         <div class="video mx-auto p-6">
           <div>
             <iframe
-              class="drop-shadow"
-              src="https://www.youtube.com/embed/ISjJu8B44NE?si=iPeF1-QkX2WDGPdz"
+              class="drop-shadow rounded-lg"
+              src="https://www.youtube.com/embed/1VjXhh7XDTM?si=yJCmA2DdmebZT_vH"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -136,8 +151,6 @@
           </div>
         </div>
       </div>
-      <!-- put lightboxs here? -->
-    <a href="#" class="lightbox" id="lyric"><span style="background-image: url('/images/characters/lyric.png');"></span></a>
     </div>
 
   <!-- footer -->
@@ -149,25 +162,25 @@
           <ul>
             <li>
               <a href="https://www.patreon.com/monstersouls">
-                <i class="fa-solid fa-patreon">Patreon</i>
+                <strong>Patreon</strong>
               </a>
             </li>
             <!-- <li>
               <i class="fa-solid fa-discord">Discord</i>
             </li> -->
             <li><a href="https://store.steampowered.com/app/2432930/Monster_Souls/">
-              <i class="fa-solid fa-steam">Steam</i>
+              <strong>Steam</strong>
             </a>
             </li>
             <li>
               <a href="https://twitter.com/monster_souls">
-                <i class="fa-solid fa-twitter">Twitter</i>
+                <strong>Twitter</strong>
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="flex-1">Contact Us! (JK, don't talk to me)</div>
+        <div class="flex-1">&copy; {year} InputHero</div>
       </div>
     </div>
   </div>
@@ -193,6 +206,9 @@
   padding: 0 1em 0 .5em;
   font-weight: 600;
   text-shadow: 0px 0px 10px #ffffff;
+}
+.header-logo {
+
 }
 .parallax-header {
   height: 80vh;
@@ -272,8 +288,8 @@
 }
 .page-top-image {
   /* transform: translateZ(-1px); */
-  height: 80vh;
-  background: no-repeat url('/images/parallax/parallax8alt.png');
+  height: 200px;
+  background: no-repeat url('/images/parallax/meon.png');
   background-position: bottom;
   background-size: inherit;
   position: absolute;
@@ -281,32 +297,34 @@
   top:0;right:0;left:0;bottom:0;
 
 }
-.page-top-image-flip {
-  /* transform: translateZ(-1px); */
-  height: 80vh;
-  background: no-repeat url('/images/parallax/parallax8alt.png');
-  background-position: bottom;
-  background-size: inherit;
-  transform: scaleY(-1) translateY(-80vh) translateY(-200px);
+.page-content-top-image {
+  height: 429px;
   position: absolute;
-  z-index: -1;
-  top:0;right:0;left:0;bottom:0;
-      filter: drop-shadow(-6px 6px 6px #0000009d);
+  background: repeat-x url('/images/parallax/cavetop.png');
+  filter: drop-shadow(-6px 6px 6px #0000009d);
 
+}
+.page-content-bottom-image {
+  position: absolute;
+  height: 200px;
+  translate: 0 -100%;
+  background: repeat-x center url('/images/parallax/cavebottom.png');
+  filter: drop-shadow(-6px 6px 6px #0000009d);
+  z-index:-1;
 }
 
 .char-right {
-      filter: drop-shadow(6px 6px 6px #0000009d);
-      display: inline-flex;
-      position: absolute;
-      right: -150px;
-    }
-    .char-left {
-      filter: drop-shadow(-6px 6px 6px #0000009d);
-      display: inline-flex;
-      position: absolute;
-      left: -150px;
-    }
+  border-radius: 50%;
+  filter: drop-shadow(6px 6px 6px #0000009d);
+  display: inline-flex;
+  float: right;
+}
+.char-left {
+  border-radius: 50%;
+  filter: drop-shadow(-6px 6px 6px #0000009d);
+  display: inline-flex;
+  float: left;
+}
 
 
 @media (max-height: 1000px) {
@@ -359,24 +377,18 @@
     height: 50vh;
   }
 
-  .page-top-image-flip {
-    /* background: no-repeat url('/images/parallax/parallax8_small.jpg'); */
-    background-size: 100%;
-    height: 50vh;
-  transform: scaleY(-1) translateY(-50vh) translateY(-200px);
-  }
 }
 .steam-embed {
-  background-color: #1a1a1a;
+  background-color: #0a0a0a;
 }
 .page-content {
   width: 100%;
 }
 :root {
-  background-color: #1a1a1a;
-  background-image: url('/images/test-tile.jpg');
+  background-color: #1f1c25;
+  /* background-image: url('/images/test-tile.jpg');
   background-size: 20%;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 
 
 }
@@ -391,9 +403,10 @@
   }
 
   .video-hero {
-      margin: 0px auto;
-      background: center url("/images/library_hero.png");
-      background-size: cover;
+      margin: 0 auto;
+      background: no-repeat center url("/images/library_hero2.png");
+      background-size: auto 100%;
+      background-color: black;
     }
     .video {
       max-width: 680px;
